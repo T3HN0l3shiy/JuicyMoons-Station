@@ -402,7 +402,7 @@
 // Handling the process of the impact of the machine on the organs of the mob
 /obj/structure/chair/milking_machine/proc/increase_current_mob_arousal(seconds_per_tick)
 	var/static/list/arousal_amounts = list("off" = 0, "low" = 1, "medium" = 2, "hard" = 3)
-	var/static/list/pleasure_amounts = list("off" = 0, "low" = 0.2, "medium" = 1, "hard" = 1.5)
+	var/static/list/pleasure_amounts = list("off" = 0, "low" = 1, "medium" = 2, "hard" = 3)
 	var/static/list/pain_amounts = list("off" = 0, "low" = 0, "medium" = 0.2, "hard" = 0.5)
 
 	current_mob.adjust_arousal(arousal_amounts[current_mode] * seconds_per_tick)

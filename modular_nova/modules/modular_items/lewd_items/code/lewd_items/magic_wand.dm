@@ -141,7 +141,7 @@
 			var/organ_to_use = pick(target_organs)
 			message = (user == target) ? pick("massages their [organ_to_use] with the [src]", "[first_adjective]teases their [organ_to_use] with [src]") : pick("[second_adjective]massages [target]'s [organ_to_use] with [src]", "uses [src] to [first_adjective]massage [target]'s [organ_to_use]", "leans the vibrator against [target]'s [organ_to_use]")
 			target.adjust_arousal((vibration_mode == "low" ? 4 : (vibration_mode == "high" ? 8 : 5)))
-			target.adjust_pleasure((vibration_mode == "low" ? 2 : (vibration_mode == "high" ? 10 : 5)))
+			target.adjust_pleasure((vibration_mode == "low" ? 4 : (vibration_mode == "high" ? 8 : 5)))
 
 		if(BODY_ZONE_CHEST)
 			var/obj/item/organ/external/genital/breasts = target.get_organ_slot(ORGAN_SLOT_BREASTS)
@@ -152,7 +152,7 @@
 			var/breasts_or_nipples = breasts ? ORGAN_SLOT_BREASTS : ORGAN_SLOT_NIPPLES
 			message = (user == target) ? pick("massages their [breasts_or_nipples] with the [src]", "[first_adjective]teases their [breasts ? "tits" : ORGAN_SLOT_NIPPLES] with [src]") : pick("[second_adjective]teases [target]'s [breasts_or_nipples] with [src]", "uses [src] to[vibration_mode == " low" ? "  slowly" : ""] massage [target]'s [breasts ? "tits" : ORGAN_SLOT_NIPPLES]", "uses [src] to tease [target]'s [breasts ? "boobs" : ORGAN_SLOT_NIPPLES]")
 			target.adjust_arousal((vibration_mode == "low" ? 3 : (vibration_mode == "high" ? 7 : 4)))
-			target.adjust_pleasure((vibration_mode == "low" ? 1 : (vibration_mode == "high" ? 9 : 4)))
+			target.adjust_pleasure((vibration_mode == "low" ? 3 : (vibration_mode == "high" ? 7 : 4)))
 
 	if(prob(30))
 		target.try_lewd_autoemote(pick("twitch_s", "moan"))

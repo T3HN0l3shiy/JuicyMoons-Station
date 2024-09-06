@@ -126,14 +126,14 @@
 	if(!istype(target))
 		return
 	if(vibration_mode == "low")
-		target.adjust_arousal(0.5 * seconds_per_tick)
-		target.adjust_pleasure(0.5 * seconds_per_tick)
+		target.adjust_arousal(1 * seconds_per_tick)
+		target.adjust_pleasure(1 * seconds_per_tick)
 	if(vibration_mode == "medium")
-		target.adjust_arousal(0.6 * seconds_per_tick)
-		target.adjust_pleasure(0.6 * seconds_per_tick)
+		target.adjust_arousal(2 * seconds_per_tick)
+		target.adjust_pleasure(2 * seconds_per_tick)
 	if(vibration_mode == "high")
-		target.adjust_arousal(0.7 * seconds_per_tick)
-		target.adjust_pleasure(0.7 * seconds_per_tick)
+		target.adjust_arousal(4 * seconds_per_tick)
+		target.adjust_pleasure(4 * seconds_per_tick)
 
 /*
 *	SIGNALLER CONTROLLED EGG
@@ -154,7 +154,9 @@
 	/// The default signaller code of the toy
 	var/code = 2
 	/// The default frequency of the toy
-	var/frequency = FREQ_ELECTROPACK
+	var/frequency = FREQ_SIGNALER
+	/// The radio frequency connection this toy is using.
+	var/datum/radio_frequency/radio_connection
 
 /obj/item/clothing/sextoy/eggvib/signalvib/Initialize(mapload)
 	if(random)
