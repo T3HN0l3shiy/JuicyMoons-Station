@@ -1,5 +1,5 @@
 #define DEFAULT_AROUSAL_INCREASE 4
-#define DEFAULT_PLEASURE_INCREASE 2
+#define DEFAULT_PLEASURE_INCREASE 4
 
 //This code huge and blocky, but we're working on update for... my god, 4 months. If you can upgrade it - do it, but don't remove or break something, test carefully. This item is insertable.
 /obj/item/clothing/sextoy/vibrator
